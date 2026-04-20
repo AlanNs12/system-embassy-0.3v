@@ -17,13 +17,14 @@ app.get('/health', (req, res) => {
 });
 
 // Rotas
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/auth',    require('./routes/auth'));
 app.use('/api/tenants', require('./routes/tenants'));
-// app.use('/api/pessoas', require('./routes/pessoas'));     // Etapa 7
-// app.use('/api/veiculos', require('./routes/veiculos'));   // Etapa 8
-// app.use('/api/visitantes', require('./routes/visitantes')); // Etapa 9
+app.use('/api/admin',   require('./routes/admin'));
+// app.use('/api/pessoas',     require('./routes/pessoas'));     // Etapa 7
+// app.use('/api/veiculos',    require('./routes/veiculos'));    // Etapa 8
+// app.use('/api/visitantes',  require('./routes/visitantes')); // Etapa 9
 // app.use('/api/prestadores', require('./routes/prestadores')); // Etapa 10
-// app.use('/api/encomendas', require('./routes/encomendas')); // Etapa 11
+// app.use('/api/encomendas',  require('./routes/encomendas')); // Etapa 11
 
 // Handler de erros global
 app.use((err, req, res, next) => {
