@@ -18,7 +18,7 @@ app.get('/health', (req, res) => {
 
 // Rotas
 app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/tenants', require('./routes/tenants'));     // Etapa 4
+app.use('/api/tenants', require('./routes/tenants'));
 // app.use('/api/pessoas', require('./routes/pessoas'));     // Etapa 7
 // app.use('/api/veiculos', require('./routes/veiculos'));   // Etapa 8
 // app.use('/api/visitantes', require('./routes/visitantes')); // Etapa 9
